@@ -1,9 +1,11 @@
 package com.bridgelab;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 	static Contacts contact;
+	static ArrayList<Contacts> contacts = new ArrayList<Contacts>();
 
 	public void Uc1_creatingcontact() {
 		Scanner sc = new Scanner(System.in);
@@ -26,12 +28,16 @@ public class Main {
 		System.out.println(contact);
 
 	}
+	public static void Uc2_add() {
+		contacts.add(contact);
+	}
 
 	public static void main(String[] args) {
 		System.out.println("welcome to address book computation");
-		Main object=new Main();
+		Main object = new Main();
 		object.Uc1_creatingcontact();
-
+        object.Uc2_add();
+        System.out.println(contacts.get(0));
 	}
 
 }
